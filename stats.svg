@@ -1,5 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180">
-  <rect width="500" height="180" fill="white" stroke="black"/>
-  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Total Contributions</text>
-  <text x="20" y="60" font-size="16" fill="black">📝 Commits (recent events): 25</text>
+<svg width="420" height="160" viewBox="0 0 420 160"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: 600 16px 'Segoe UI', sans-serif; fill: #58a6ff; }
+    .stat  { font: 700 34px 'Segoe UI', sans-serif; fill: #c9d1d9; }
+    .label { font: 400 13px 'Segoe UI', sans-serif; fill: #8b949e; }
+  </style>
+  <rect x="0.5" y="0.5" width="419" height="159" rx="10"
+        fill="#0d1117" stroke="#30363d"/>
+  <text x="25" y="35" class="title">PrathamReddy888's GitHub Stats</text>
+  <text x="25" y="95" class="stat">724</text>
+  <text x="25" y="120" class="label">Total Contributions (all-time)</text>
 </svg>

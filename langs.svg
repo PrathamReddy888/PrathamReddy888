@@ -1,5 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180">
-  <rect width="500" height="180" fill="white" stroke="black"/>
-  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Languages Used</text>
-  <text x="20" y="60" font-size="16" fill="black">TypeScript: 6 repos</text><text x="20" y="85" font-size="16" fill="black">HTML: 3 repos</text><text x="20" y="110" font-size="16" fill="black">Python: 5 repos</text><text x="20" y="135" font-size="16" fill="black">JavaScript: 3 repos</text><text x="20" y="160" font-size="16" fill="black">CSS: 1 repos</text><text x="20" y="185" font-size="16" fill="black">Dart: 1 repos</text>
+<svg width="420" height="215" viewBox="0 0 420 215"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: 600 16px 'Segoe UI', sans-serif; fill: #58a6ff; }
+    .lang  { font: 400 13px 'Segoe UI', sans-serif; fill: #c9d1d9; }
+    .pct   { font: 400 11px 'Segoe UI', sans-serif; fill: #8b949e; }
+  </style>
+  <rect x="0.5" y="0.5" width="419" height="214" rx="10"
+        fill="#0d1117" stroke="#30363d"/>
+  <text x="25" y="35" class="title">Most Used Languages</text>
+  
+  <text x="25" y="69" class="lang">TypeScript</text>
+  <rect x="150" y="57" width="220" height="10" rx="5" fill="#21262d"/>
+  <rect x="150" y="57" width="205.1" height="10" rx="5" fill="#3178c6"/>
+  <text x="150" y="51" class="pct" text-anchor="start">93.2%</text>
+  <text x="25" y="97" class="lang">CSS</text>
+  <rect x="150" y="85" width="220" height="10" rx="5" fill="#21262d"/>
+  <rect x="150" y="85" width="7.9" height="10" rx="5" fill="#563d7c"/>
+  <text x="150" y="79" class="pct" text-anchor="start">3.6%</text>
+  <text x="25" y="125" class="lang">JavaScript</text>
+  <rect x="150" y="113" width="220" height="10" rx="5" fill="#21262d"/>
+  <rect x="150" y="113" width="4.1" height="10" rx="5" fill="#f1e05a"/>
+  <text x="150" y="107" class="pct" text-anchor="start">1.9%</text>
+  <text x="25" y="153" class="lang">Python</text>
+  <rect x="150" y="141" width="220" height="10" rx="5" fill="#21262d"/>
+  <rect x="150" y="141" width="4.0" height="10" rx="5" fill="#3572A5"/>
+  <text x="150" y="135" class="pct" text-anchor="start">0.9%</text>
+  <text x="25" y="181" class="lang">HTML</text>
+  <rect x="150" y="169" width="220" height="10" rx="5" fill="#21262d"/>
+  <rect x="150" y="169" width="4.0" height="10" rx="5" fill="#e34c26"/>
+  <text x="150" y="163" class="pct" text-anchor="start">0.4%</text>
 </svg>
