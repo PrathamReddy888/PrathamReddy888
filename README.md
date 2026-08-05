@@ -6,7 +6,7 @@
 
 <br/>
 
-<div align="justify">
+<div align="right">
 <img src="./unnamed.png" width="60" alt="banner"/>
 <div align="right">
 <a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
