@@ -2,7 +2,7 @@
 
 <img src="./unnamed.png" width="20" alt="banner"/>
 
-<a href="Under Construction...">website</a> ·
+<!-- <a href="Under Construction...">website</a> ·  -->
 <a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
 <a href="https://x.com/Pratham8008">x</a>
 
