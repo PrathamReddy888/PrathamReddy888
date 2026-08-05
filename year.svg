@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="150">
-  <rect width="500" height="150" fill="lightyellow"/>
-  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Yearly Stats</text>
-  <text x="20" y="60" font-size="16" fill="black">Yearly stats not implemented</text><text x="20" y="85" font-size="16" fill="black">Add commit history later</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180">
+  <rect width="500" height="180" fill="white" stroke="black"/>
+  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Yearly Contributions</text>
+  <text x="20" y="60" font-size="16" fill="black">📅 2026: 1 commits</text>
 </svg>
