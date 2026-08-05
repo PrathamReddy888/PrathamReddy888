@@ -6,12 +6,12 @@
 
 <br/>
 
-<div align="right">
+<div align="justify">
 <img src="./unnamed.png" width="60" alt="banner"/>
 <div align="right">
 <a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
 <div align="right">
-<a href="https://x.com/Pratham8008">x</a>
+<a href="https://x.com/Pratham8008">x</a> .
 <div align="center">
 <img src="./ascii.svg" width="450" alt="ascii portrait"/>
 </div>
