@@ -1,28 +1,50 @@
-<div align="left">
-
-<!-- <a href="Under Construction...">website</a> ·  -->
-
-</div>
-
-<br/>
-
-<div align="right">
-<img src="./unnamed.png" width="60" alt="banner"/>
-<div align="right">
-<a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
-<div align="right">
-<a href="https://x.com/Pratham8008">x</a> .
 <div align="center">
-<img src="./ascii.svg" width="450" alt="ascii portrait"/>
+  <img src="banner.svg" alt="Pratham Reddy" width="100%">
 </div>
 
-## My GitHub Stats
+<div align="center">
 
-![Contributions](stats.svg)
-![Languages](langs.svg)
+[`in/pratham-reddy`](https://www.linkedin.com/in/pratham-reddy-618948372/) &nbsp;·&nbsp; [`x/Pratham8008`](https://x.com/Pratham8008)
 
-## I am a software engineer focused on building clean, efficient & maintainable applications.
-## My approach to development centers on writing readable code, understanding the core problems before jumping into solutions, and continuously learning new architectural patterns.
-## I enjoy the process of turning complex requirements into streightforward, scalable software.
+</div>
 
-![](./unnamed.png)
+<br>
+
+<div align="center">
+  <img src="ascii.svg" alt="ascii portrait" width="260">
+</div>
+
+<br>
+
+> **SITE LOG**
+
+I'm a software engineer, building applications that are clean, efficient, and built to last.
+
+My approach: write code that reads plainly, understand the real problem before reaching for a solution, and keep adding new architectural patterns to the toolkit.
+
+I like taking a tangle of requirements and turning it into something straightforward and scalable.
+
+---
+
+> **STRUCTURE**
+
+<div align="center">
+  <img src="stats.svg" alt="contribution stats" width="49%">
+  <img src="langs.svg" alt="languages used" width="49%">
+</div>
+
+---
+
+> **COORDINATES**
+
+<div align="center">
+
+[`in/pratham-reddy`](https://www.linkedin.com/in/pratham-reddy-618948372/) &nbsp;·&nbsp; [`x/Pratham8008`](https://x.com/Pratham8008)
+
+</div>
+
+<br>
+
+<div align="center">
+  <sub>concrete, fog, and version control</sub>
+</div>

@@ -36,28 +36,17 @@ GITHUB_GRAPHQL = "https://api.github.com/graphql"
 # Where the SVGs get written. Default: repo root (current working directory).
 OUTPUT_DIR = os.environ.get("OUTPUT_DIR", ".")
 
-# Small color map for common languages (GitHub's linguist colors, abbreviated).
-LANGUAGE_COLORS = {
-    "Python": "#3572A5",
-    "JavaScript": "#f1e05a",
-    "TypeScript": "#3178c6",
-    "Java": "#b07219",
-    "Go": "#00ADD8",
-    "Rust": "#dea584",
-    "C": "#555555",
-    "C++": "#f34b7d",
-    "C#": "#178600",
-    "Ruby": "#701516",
-    "PHP": "#4F5D95",
-    "HTML": "#e34c26",
-    "CSS": "#563d7c",
-    "Shell": "#89e051",
-    "Swift": "#F05138",
-    "Kotlin": "#A97BFF",
-    "Dart": "#00B4AB",
-    "Jupyter Notebook": "#DA5B0B",
-}
-DEFAULT_COLOR = "#8b949e"
+# Concrete / fog / amber palette, matching the profile banner's aesthetic.
+CONCRETE_950 = "#0d0e10"
+CONCRETE_800 = "#232428"
+CONCRETE_600 = "#3d3f45"
+FOG_400 = "#8b9098"
+FOG_100 = "#e7e9ec"
+SIGNAL_AMBER = "#dcb27c"
+
+# Every language bar renders in the same muted fog tone except the single
+# top language, which gets the amber accent — one signal, kept rare.
+DEFAULT_COLOR = FOG_400
 
 
 def require_env(name):
@@ -176,17 +165,27 @@ def get_language_totals(session, username):
 def generate_stats_svg(total_contributions, username, path):
     width, height = 420, 160
     svg = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Total GitHub contributions">
+  <defs>
+    <linearGradient id="fog" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="{FOG_400}" stop-opacity="0"/>
+      <stop offset="100%" stop-color="{FOG_400}" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
   <style>
-    .title {{ font: 600 16px 'Segoe UI', sans-serif; fill: #58a6ff; }}
-    .stat  {{ font: 700 34px 'Segoe UI', sans-serif; fill: #c9d1d9; }}
-    .label {{ font: 400 13px 'Segoe UI', sans-serif; fill: #8b949e; }}
+    .label {{ font: 600 11px 'JetBrains Mono','Courier New',monospace; fill: {FOG_400};
+              letter-spacing: 3px; text-transform: uppercase; }}
+    .stat  {{ font: 700 40px 'Archivo Black','Arial Narrow',Impact,sans-serif; fill: {FOG_100}; }}
+    .sub   {{ font: 400 12px 'JetBrains Mono','Courier New',monospace; fill: {FOG_400};
+              letter-spacing: 1px; }}
   </style>
-  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10"
-        fill="#0d1117" stroke="#30363d"/>
-  <text x="25" y="35" class="title">{username}'s GitHub Stats</text>
-  <text x="25" y="95" class="stat">{total_contributions:,}</text>
-  <text x="25" y="120" class="label">Total Contributions (all-time)</text>
+  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}"
+        fill="{CONCRETE_950}" stroke="{CONCRETE_600}"/>
+  <rect x="0.5" y="0.5" width="140" height="{height - 1}" fill="url(#fog)"/>
+  <rect x="0" y="0" width="4" height="{height}" fill="{SIGNAL_AMBER}"/>
+  <text x="28" y="34" class="label">{username} // site log</text>
+  <text x="28" y="98" class="stat">{total_contributions:,}</text>
+  <text x="28" y="124" class="sub">total contributions — all time</text>
 </svg>"""
     with open(path, "w", encoding="utf-8") as f:
         f.write(svg)
@@ -194,9 +193,9 @@ def generate_stats_svg(total_contributions, username, path):
 
 def generate_langs_svg(language_totals, path, top_n=8):
     width = 420
-    row_height = 28
-    top_padding = 55
-    bottom_padding = 20
+    row_height = 30
+    top_padding = 58
+    bottom_padding = 22
 
     top_languages = sorted(
         language_totals.items(), key=lambda kv: kv[1], reverse=True
@@ -208,27 +207,32 @@ def generate_langs_svg(language_totals, path, top_n=8):
     rows = []
     for i, (lang, byte_count) in enumerate(top_languages):
         pct = byte_count / total_bytes * 100
-        color = LANGUAGE_COLORS.get(lang, DEFAULT_COLOR)
+        # only the single top language gets the amber accent — everything
+        # else stays a quiet, uniform fog grey (one signal, kept rare).
+        color = SIGNAL_AMBER if i == 0 else DEFAULT_COLOR
         y = top_padding + i * row_height
-        bar_max_width = 220
-        bar_width = max(4, bar_max_width * (pct / 100))
+        bar_max_width = 180
+        bar_width = max(3, bar_max_width * (pct / 100))
 
         rows.append(f"""
-  <text x="25" y="{y + 14}" class="lang">{lang}</text>
-  <rect x="150" y="{y + 2}" width="{bar_max_width}" height="10" rx="5" fill="#21262d"/>
-  <rect x="150" y="{y + 2}" width="{bar_width:.1f}" height="10" rx="5" fill="{color}"/>
-  <text x="150" y="{y - 4}" class="pct" text-anchor="start">{pct:.1f}%</text>""")
+  <text x="28" y="{y + 5}" class="lang">{lang.upper()}</text>
+  <rect x="180" y="{y - 5}" width="{bar_max_width}" height="4" fill="{CONCRETE_600}"/>
+  <rect x="180" y="{y - 5}" width="{bar_width:.1f}" height="4" fill="{color}"/>
+  <text x="{width - 14}" y="{y + 5}" class="pct" text-anchor="end">{pct:.1f}%</text>""")
 
     svg = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most used languages">
   <style>
-    .title {{ font: 600 16px 'Segoe UI', sans-serif; fill: #58a6ff; }}
-    .lang  {{ font: 400 13px 'Segoe UI', sans-serif; fill: #c9d1d9; }}
-    .pct   {{ font: 400 11px 'Segoe UI', sans-serif; fill: #8b949e; }}
+    .label {{ font: 600 11px 'JetBrains Mono','Courier New',monospace; fill: {FOG_400};
+              letter-spacing: 3px; text-transform: uppercase; }}
+    .lang  {{ font: 400 12px 'JetBrains Mono','Courier New',monospace; fill: {FOG_100};
+              letter-spacing: 1px; }}
+    .pct   {{ font: 400 11px 'JetBrains Mono','Courier New',monospace; fill: {FOG_400}; }}
   </style>
-  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}" rx="10"
-        fill="#0d1117" stroke="#30363d"/>
-  <text x="25" y="35" class="title">Most Used Languages</text>
+  <rect x="0.5" y="0.5" width="{width - 1}" height="{height - 1}"
+        fill="{CONCRETE_950}" stroke="{CONCRETE_600}"/>
+  <rect x="0" y="0" width="4" height="{height}" fill="{SIGNAL_AMBER}"/>
+  <text x="28" y="34" class="label">structure // languages</text>
   {''.join(rows)}
 </svg>"""
     with open(path, "w", encoding="utf-8") as f:
