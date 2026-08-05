@@ -11,7 +11,7 @@
 <br/>
 
 <div align="center">
-<img src="./ascii.svg" width="860" alt="ascii portrait"/>
+<img src="./ascii.svg" width="620" alt="ascii portrait"/>
 </div>
 
 ## I am a software engineer focused on building clean, efficient & maintainable applications.
