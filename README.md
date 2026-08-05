@@ -1,6 +1,4 @@
-<div align="center">
-  <img src="banner.svg" alt="Pratham Reddy" width="100%">
-</div>
+
 
 <div align="center">
 
