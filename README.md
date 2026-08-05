@@ -1,10 +1,10 @@
 <div align="right">
 
-<img src="./unnamed.png" width="1" alt="banner"/>
+<img src="./unnamed.png" width="20" alt="banner"/>
 
-<a href="https://example.com">website</a> ·
-<a href="https://linkedin.com/in/handle">linkedin</a> ·
-<a href="https://x.com/handle">x</a>
+<a href="Under Construction...">website</a> ·
+<a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
+<a href="https://x.com/Pratham8008">x</a>
 
 </div>
 
