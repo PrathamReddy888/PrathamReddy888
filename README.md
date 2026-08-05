@@ -16,6 +16,13 @@
 <img src="./ascii.svg" width="450" alt="ascii portrait"/>
 </div>
 
+## My GitHub Stats
+
+![Stats](stats.svg)
+![Streak](streak.svg)
+![Languages](langs.svg)
+![Year](year.svg)
+
 ## I am a software engineer focused on building clean, efficient & maintainable applications.
 ## My approach to development centers on writing readable code, understanding the core problems before jumping into solutions, and continuously learning new architectural patterns.
 ## I enjoy the process of turning complex requirements into streightforward, scalable software.
