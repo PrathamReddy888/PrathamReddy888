@@ -1,6 +1,6 @@
 <div align="right">
 
-<img src="./banner.svg" width="880" alt="banner"/>
+<img src="./unnamed.png" width="880" alt="banner"/>
 
 <a href="https://example.com">website</a> ·
 <a href="https://linkedin.com/in/handle">linkedin</a> ·
