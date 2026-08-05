@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="180">
   <rect width="500" height="180" fill="white" stroke="black"/>
-  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Top Languages</text>
-  <text x="20" y="60" font-size="16" fill="black">TypeScript: 6 repos</text><text x="20" y="85" font-size="16" fill="black">Python: 5 repos</text><text x="20" y="110" font-size="16" fill="black">HTML: 3 repos</text><text x="20" y="135" font-size="16" fill="black">JavaScript: 3 repos</text><text x="20" y="160" font-size="16" fill="black">CSS: 1 repos</text>
+  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Languages Used</text>
+  <text x="20" y="60" font-size="16" fill="black">TypeScript: 6 repos</text><text x="20" y="85" font-size="16" fill="black">HTML: 3 repos</text><text x="20" y="110" font-size="16" fill="black">Python: 5 repos</text><text x="20" y="135" font-size="16" fill="black">JavaScript: 3 repos</text><text x="20" y="160" font-size="16" fill="black">CSS: 1 repos</text><text x="20" y="185" font-size="16" fill="black">Dart: 1 repos</text>
 </svg>

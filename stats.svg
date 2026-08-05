@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="180">
   <rect width="500" height="180" fill="white" stroke="black"/>
-  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">GitHub Stats</text>
-  <text x="20" y="60" font-size="16" fill="black">⭐ Stars: 10</text><text x="20" y="85" font-size="16" fill="black">👥 Followers: 1</text><text x="20" y="110" font-size="16" fill="black">📦 Public Repos: 31</text>
+  <text x="250" y="30" font-size="20" text-anchor="middle" fill="black">Total Contributions</text>
+  <text x="20" y="60" font-size="16" fill="black">📝 Commits (recent events): 25</text>
 </svg>
