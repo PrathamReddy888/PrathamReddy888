@@ -1,16 +1,19 @@
 <div align="right">
 
 <!-- <a href="Under Construction...">website</a> ·  -->
-<a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
-<a href="https://x.com/Pratham8008">x</a>
 
 </div>
 
 <br/>
 
-<img src="./unnamed.png" width="20" alt="banner"/>
+<div align="right">
+<img src="./unnamed.png" width="60" alt="banner"/>
+<div align="right">
+<a href="https://www.linkedin.com/in/pratham-reddy-618948372/">linkedin</a> ·
+<div align="right">
+<a href="https://x.com/Pratham8008">x</a>
 <div align="center">
-<img src="./ascii.svg" width="620" alt="ascii portrait"/>
+<img src="./ascii.svg" width="450" alt="ascii portrait"/>
 </div>
 
 ## I am a software engineer focused on building clean, efficient & maintainable applications.
