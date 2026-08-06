@@ -42,7 +42,3 @@ I like taking a tangle of requirements and turning it into something straightfor
 </div>
 
 <br>
-
-<div align="center">
-  <sub>concrete, fog, and version control</sub>
-</div>
