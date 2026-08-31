@@ -1,11 +1,17 @@
 <!-- ═══════════════════════════════════════════════════════════════════════
-     PRATHAM REDDY · BLACK KNIGHT README · v7 · ANIMATED SVG SYSTEM
+     PRATHAM REDDY · README · v8 · SOFT BRUTALISM / ATMOSPHERIC SYSTEM
      GitHub renders SVG files as images (SMIL + CSS animations included),
      but it strips inline SVG markup and inline CSS from markdown. So every
      graphic in this file is an animated SVG committed to this repo under
      assets/ and referenced as an image. Nothing can be stripped.
-     palette: Black #000000 · Cod Gray #1C1C1C · Mine Shaft #3D3D3D ·
-              Boulder #7D7D7D · Silver Chalice #B0B0B0
+     palette: Midnight Concrete #0D0D0F · panels #131317 · borders #2A2A2F ·
+              text #EDEDF0 · meta #8A8A93 — neon core used sparingly:
+              cyan #00FFFF (structure · cursor · radar), purple #BF00FF
+              (signal blips), lime #C0FF00 (live indicators)
+     style: soft bezel containers (24px radii), machined type (heavy
+            sans headers + mono metadata), rim light on lit edges,
+            digital dust grain, fragmented grid — no hard offset
+            shadows, no number counting: final values fade in once
      structure: 01 hero (portrait, name, live counters, radar)
                 01b console (animated terminal)
                 02 the record (streak + daily chart, live from GitHub)
@@ -25,7 +31,7 @@
      ═════════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-<img src="assets/hero.svg" alt="Pratham Reddy identity plate: portrait, name, live status counters, signal radar" />
+<img src="assets/hero.svg" alt="Pratham Reddy identity plate: portrait, name, live status tiles, signal radar" />
 <br />
 <!-- ══ 01b · THE CONSOLE ══ -->
 <img src="assets/terminal.svg" alt="Animated terminal console: whoami, cat stack, tail proof log" />
@@ -55,7 +61,7 @@
 <br />
 <img src="assets/footer.svg" alt="End of file, transmission complete" />
 <br />
-<sub>BLACK KNIGHT v7 · 11 ANIMATED SVGS · LIVE DATA FROM GITHUB · SLOTS IN SOURCE</sub>
+<sub>SOFT BRUTALISM v8 · MIDNIGHT &amp; NEON · 11 ANIMATED SVGS · LIVE DATA FROM GITHUB · SLOTS IN SOURCE</sub>
 </div>
 
 <!-- SLOT: NOW — your live focus rows. TO ACTIVATE: delete this line and the "◄ end of SLOT: NOW" line, then edit the rows. Duplicate a row to add items.
