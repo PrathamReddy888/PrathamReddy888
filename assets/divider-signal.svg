@@ -23,6 +23,7 @@
     <circle cx="716" cy="32" r="2.5" fill="#00FFFF">
       <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
     </circle>
+    <text>
     <text x="840" y="36" text-anchor="end" font-size="9" letter-spacing="2" fill="#5A5A63">03 CHANNELS</text>
   </g>
 </svg>
