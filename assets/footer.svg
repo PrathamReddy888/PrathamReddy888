@@ -1,48 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="160" viewBox="0 0 850 160" role="img" aria-label="End of file stamp">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="160" viewBox="0 0 850 160" role="img" aria-label="End of file stamp with orbit and radar">
   <defs>
-    <clipPath id="plateClip"><rect x="0" y="0" width="840" height="150" rx="14"/></clipPath>
-    <clipPath id="tkClip"><rect x="20" y="114" width="800" height="22"/></clipPath>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.93  0 0 0 0 0.93  0 0 0 0 0.95  0 0 0 0.05 0"/>
+    </filter>
+    <filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="rim" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00FFFF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#00FFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="plateClip"><rect x="5" y="5" width="840" height="150" rx="24"/></clipPath>
+    <clipPath id="tkClip"><rect x="29" y="114" width="792" height="24"/></clipPath>
   </defs>
-  <g font-family="monospace">
-    <rect x="10" y="10" width="840" height="150" rx="14" fill="#B0B0B0"/>
-    <rect x="0" y="0" width="840" height="150" rx="14" fill="#000000"/>
+  <g font-family="'Cascadia Mono','JetBrains Mono',Consolas,Menlo,monospace">
+    <rect x="5" y="5" width="840" height="150" rx="24" fill="#0D0D0F"/>
+    <g clip-path="url(#plateClip)">
+      <rect x="5" y="5" width="840" height="150" filter="url(#grain)"/>
+    </g>
+    <rect x="8" y="8" width="834" height="144" rx="21" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="10"/>
     <!-- EOF block -->
-    <text x="28" y="64" font-size="30" font-weight="bold" letter-spacing="4" fill="#B0B0B0">EOF</text>
-    <text x="28" y="86" font-size="10" letter-spacing="2" fill="#7D7D7D">TRANSMISSION COMPLETE</text>
-    <text x="28" y="102" font-size="8.5" letter-spacing="1.5" fill="#3D3D3D">LINKS BELOW · OPEN CHANNELS</text>
-    <!-- rotating ring -->
-    <circle cx="420" cy="58" r="30" fill="none" stroke="#7D7D7D" stroke-width="1.5" stroke-dasharray="5 7">
-      <animateTransform attributeName="transform" type="rotate" from="0 420 58" to="360 420 58" dur="9s" repeatCount="indefinite"/>
+    <g font-family="'Segoe UI Black','Arial Black',Arial,sans-serif">
+      <text x="33" y="66" font-size="30" letter-spacing="3" fill="#EDEDF0">EOF</text>
+    </g>
+    <text x="33" y="88" font-size="10" letter-spacing="2" fill="#8A8A93">TRANSMISSION COMPLETE</text>
+    <text x="33" y="104" font-size="8.5" letter-spacing="1.5" fill="#5A5A63">CHANNELS OPEN BELOW</text>
+    <!-- core + orbit -->
+    <circle cx="420" cy="58" r="26" fill="none" stroke="#3A3A42" stroke-width="1.5" stroke-dasharray="5 7">
+      <animateTransform attributeName="transform" type="rotate" from="0 420 58" to="360 420 58" dur="10s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="420" cy="58" r="19" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
-    <circle cx="420" cy="58" r="4.5" fill="#B0B0B0">
-      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+    <circle cx="420" cy="58" r="15" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+    <circle cx="420" cy="58" r="4" fill="#00FFFF" filter="url(#neon)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="32" r="3" fill="#BF00FF" filter="url(#neon)">
+      <animateTransform attributeName="transform" type="rotate" from="0 420 58" to="360 420 58" dur="10s" repeatCount="indefinite"/>
     </circle>
     <!-- radar -->
-    <circle cx="748" cy="58" r="28" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
-    <circle cx="748" cy="58" r="18" fill="none" stroke="#3D3D3D" stroke-width="1"/>
-    <circle cx="748" cy="58" r="8" fill="none" stroke="#3D3D3D" stroke-width="1"/>
+    <circle cx="748" cy="58" r="28" fill="none" stroke="#2A2A2F" stroke-width="1.5"/>
+    <circle cx="748" cy="58" r="18" fill="none" stroke="#2A2A2F" stroke-width="1"/>
+    <circle cx="748" cy="58" r="8" fill="none" stroke="#2A2A2F" stroke-width="1"/>
     <g>
-      <line x1="748" y1="58" x2="776" y2="58" stroke="#B0B0B0" stroke-width="1.5" opacity="0.9"/>
+      <line x1="748" y1="58" x2="776" y2="58" stroke="#00FFFF" stroke-width="1.5" opacity="0.85" filter="url(#neon)"/>
       <animateTransform attributeName="transform" type="rotate" from="0 748 58" to="360 748 58" dur="3.5s" repeatCount="indefinite"/>
     </g>
-    <circle cx="762" cy="44" r="3" fill="#B0B0B0">
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
+    <circle cx="762" cy="44" r="2.8" fill="#BF00FF" filter="url(#neon)">
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.2;0.6;1" dur="3.5s" repeatCount="indefinite"/>
     </circle>
-    <!-- ticker -->
-    <rect x="14" y="112" width="812" height="26" rx="6" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1"/>
+    <!-- ticker, seamless -->
+    <rect x="19" y="112" width="812" height="28" rx="10" fill="#0A0910" stroke="#2A2A2F" stroke-width="1.5"/>
     <g clip-path="url(#tkClip)">
       <g>
-        <text x="24" y="129" font-size="9.5" letter-spacing="1.5" fill="#7D7D7D">36 REPOSITORIES — ZERO LOCKED — END OF TRANSMISSION — OPEN CHANNELS BELOW —</text>
-        <text x="884" y="129" font-size="9.5" letter-spacing="1.5" fill="#7D7D7D">36 REPOSITORIES — ZERO LOCKED — END OF TRANSMISSION — OPEN CHANNELS BELOW —</text>
-        <animateTransform attributeName="transform" type="translate" from="0 0" to="-860 0" dur="18s" repeatCount="indefinite"/>
+        <text x="29" y="131" font-size="9.5" letter-spacing="1.5" fill="#5A5A63" textLength="792" lengthAdjust="spacingAndGlyphs">36 REPOSITORIES · ZERO LOCKED · TRANSMISSION COMPLETE · OPEN CHANNELS BELOW —</text>
+        <text x="821" y="131" font-size="9.5" letter-spacing="1.5" fill="#5A5A63" textLength="792" lengthAdjust="spacingAndGlyphs">36 REPOSITORIES · ZERO LOCKED · TRANSMISSION COMPLETE · OPEN CHANNELS BELOW —</text>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-792 0" dur="22s" repeatCount="indefinite"/>
       </g>
     </g>
-    <!-- marching ants -->
-    <rect x="1.5" y="1.5" width="837" height="147" rx="12.5" fill="none" stroke="#7D7D7D" stroke-width="1" stroke-dasharray="7 9" opacity="0.45">
-      <animate attributeName="stroke-dashoffset" from="0" to="-64" dur="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="0" y="0" width="840" height="150" rx="14" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+    <rect x="5" y="5" width="840" height="150" rx="24" fill="none" stroke="#2A2A2F" stroke-width="3"/>
+    <path d="M 845 29 L 845 131 A 24 24 0 0 1 821 155 L 29 155" fill="none" stroke="url(#rim)" stroke-width="2" opacity="0.65"/>
   </g>
 </svg>

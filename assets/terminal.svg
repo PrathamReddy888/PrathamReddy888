@@ -1,127 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="850" height="322" viewBox="0 0 850 322" role="img" aria-label="Terminal console">
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="322" viewBox="0 0 850 322" role="img" aria-label="Terminal console, animated typing session">
   <defs>
     <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
-      <path d="M26 0H0V26" fill="none" stroke="#1C1C1C" stroke-width="1"/>
+      <path d="M26 0H0V26" fill="none" stroke="#191A20" stroke-width="1" stroke-dasharray="7 19"/>
     </pattern>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.93  0 0 0 0 0.93  0 0 0 0 0.95  0 0 0 0.05 0"/>
+    </filter>
+    <filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
     <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#B0B0B0" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#B0B0B0" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#B0B0B0" stop-opacity="0"/>
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.045"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
     </linearGradient>
-    <clipPath id="plateClip"><rect x="0" y="0" width="840" height="312" rx="14"/></clipPath>
+    <linearGradient id="rim" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00FFFF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#00FFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="plateClip"><rect x="5" y="5" width="840" height="312" rx="24"/></clipPath>
     <clipPath id="cmd1Clip">
-      <rect x="42" y="0" width="0" height="26">
-        <animate attributeName="width" values="0;0;54;54;0" keyTimes="0;0.03;0.09;0.96;1" dur="13s" repeatCount="indefinite"/>
+      <rect x="51" y="0" width="0" height="20">
+        <animate attributeName="width" values="0;0;47;47;0;0" keyTimes="0;0.02;0.08;0.95;0.99;1" dur="13s" repeatCount="indefinite"/>
       </rect>
     </clipPath>
     <clipPath id="cmd2Clip">
-      <rect x="42" y="0" width="0" height="26">
-        <animate attributeName="width" values="0;0;135;135;0" keyTimes="0;0.16;0.26;0.96;1" dur="13s" repeatCount="indefinite"/>
+      <rect x="51" y="0" width="0" height="20">
+        <animate attributeName="width" values="0;0;118;118;0;0" keyTimes="0;0.15;0.24;0.95;0.99;1" dur="13s" repeatCount="indefinite"/>
       </rect>
     </clipPath>
     <clipPath id="cmd3Clip">
-      <rect x="42" y="0" width="0" height="26">
-        <animate attributeName="width" values="0;0;180;180;0" keyTimes="0;0.33;0.43;0.96;1" dur="13s" repeatCount="indefinite"/>
+      <rect x="51" y="0" width="0" height="20">
+        <animate attributeName="width" values="0;0;150;150;0;0" keyTimes="0;0.32;0.41;0.95;0.99;1" dur="13s" repeatCount="indefinite"/>
       </rect>
     </clipPath>
   </defs>
-  <g font-family="monospace">
-    <!-- hard shadow + plate -->
-    <rect x="10" y="10" width="840" height="312" rx="14" fill="#B0B0B0"/>
-    <rect x="0" y="0" width="840" height="312" rx="14" fill="#000000"/>
-    <rect x="0" y="44" width="840" height="228" fill="url(#grid)"/>
+  <g font-family="'Cascadia Mono','JetBrains Mono',Consolas,Menlo,monospace">
+    <rect x="5" y="5" width="840" height="312" rx="24" fill="#0D0D0F"/>
+    <g clip-path="url(#plateClip)">
+      <rect x="5" y="52" width="840" height="220" fill="url(#grid)"/>
+      <rect x="5" y="5" width="840" height="312" filter="url(#grain)"/>
+    </g>
+    <rect x="8" y="8" width="834" height="306" rx="21" fill="none" stroke="#FFFFFF" stroke-opacity="0.035" stroke-width="10"/>
     <!-- title bar -->
     <g clip-path="url(#plateClip)">
-      <rect x="0" y="0" width="840" height="44" fill="#1C1C1C"/>
+      <rect x="5" y="5" width="840" height="46" fill="#131317"/>
     </g>
-    <circle cx="26" cy="22" r="6" fill="#7D7D7D"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/></circle>
-    <circle cx="48" cy="22" r="6" fill="#7D7D7D"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="0.4s" repeatCount="indefinite"/></circle>
-    <circle cx="70" cy="22" r="6" fill="#7D7D7D"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.4s" begin="0.8s" repeatCount="indefinite"/></circle>
-    <text x="420" y="27" text-anchor="middle" font-size="11" letter-spacing="2" fill="#7D7D7D">pratham@github:~ — tty1</text>
-    <text x="816" y="27" text-anchor="end" font-size="9" letter-spacing="1.5" fill="#3D3D3D">SHELL: ZSH</text>
-    <!-- line 1 -->
+    <rect x="5" y="51" width="840" height="1.5" fill="#2A2A2F"/>
+    <circle cx="31" cy="28" r="5.5" fill="#00FFFF" filter="url(#neon)">
+      <animate attributeName="opacity" values="0.35;0.9;0.35" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="53" cy="28" r="5.5" fill="#3A3A42"/>
+    <circle cx="75" cy="28" r="5.5" fill="#3A3A42"/>
+    <text x="425" y="32" text-anchor="middle" font-size="11" letter-spacing="2" fill="#8A8A93">pratham@github:~ — tty1</text>
+    <text x="821" y="31" text-anchor="end" font-size="9" letter-spacing="1.5" fill="#5A5A63">ZSH</text>
+    <!-- command 1 -->
     <g>
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.03;0.96" dur="13s" repeatCount="indefinite"/>
-      <text x="24" y="78" font-size="15" font-weight="bold" fill="#B0B0B0">$</text>
-      <g clip-path="url(#cmd1Clip)"><text x="42" y="78" font-size="15" fill="#B0B0B0">whoami</text></g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.02;0.95;1" dur="13s" repeatCount="indefinite"/>
+      <text x="33" y="86" font-size="15" font-weight="bold" fill="#00FFFF">$</text>
+      <g clip-path="url(#cmd1Clip)"><text x="51" y="86" font-size="15" fill="#EDEDF0" textLength="47" lengthAdjust="spacingAndGlyphs">whoami</text></g>
     </g>
-    <text x="24" y="102" font-size="15" fill="#7D7D7D">PrathamReddy888 — operator // 36 public repos
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.10;0.96" dur="13s" repeatCount="indefinite"/>
+    <text x="33" y="112" font-size="14" fill="#8A8A93">PrathamReddy888 — operator // 36 public repos
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.09;0.95;1" dur="13s" repeatCount="indefinite"/>
     </text>
-    <!-- line 2 -->
+    <!-- command 2 -->
     <g>
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.16;0.96" dur="13s" repeatCount="indefinite"/>
-      <text x="24" y="140" font-size="15" font-weight="bold" fill="#B0B0B0">$</text>
-      <g clip-path="url(#cmd2Clip)"><text x="42" y="140" font-size="15" fill="#B0B0B0">cat ~/stack.txt</text></g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.15;0.95;1" dur="13s" repeatCount="indefinite"/>
+      <text x="33" y="148" font-size="15" font-weight="bold" fill="#00FFFF">$</text>
+      <g clip-path="url(#cmd2Clip)"><text x="51" y="148" font-size="15" fill="#EDEDF0" textLength="118" lengthAdjust="spacingAndGlyphs">cat ~/stack.txt</text></g>
     </g>
-    <text x="24" y="164" font-size="15" fill="#7D7D7D">python · rust · typescript · pytorch · react · next
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.27;0.96" dur="13s" repeatCount="indefinite"/>
+    <text x="33" y="174" font-size="14" fill="#8A8A93">python · rust · typescript · pytorch · react · next
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.25;0.95;1" dur="13s" repeatCount="indefinite"/>
     </text>
-    <!-- line 3 -->
+    <!-- command 3 -->
     <g>
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.33;0.96" dur="13s" repeatCount="indefinite"/>
-      <text x="24" y="204" font-size="15" font-weight="bold" fill="#B0B0B0">$</text>
-      <g clip-path="url(#cmd3Clip)"><text x="42" y="204" font-size="15" fill="#B0B0B0">tail -f ~/proof.log</text></g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.32;0.95;1" dur="13s" repeatCount="indefinite"/>
+      <text x="33" y="212" font-size="15" font-weight="bold" fill="#00FFFF">$</text>
+      <g clip-path="url(#cmd3Clip)"><text x="51" y="212" font-size="15" fill="#EDEDF0" textLength="150" lengthAdjust="spacingAndGlyphs">tail -f ~/proof.log</text></g>
     </g>
     <g>
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.44;0.96" dur="13s" repeatCount="indefinite"/>
-      <text x="24" y="228" font-size="15" fill="#B0B0B0">streaming live — jump to 02 · the record ↓</text>
-      <rect x="410" y="190" width="10" height="18" fill="#B0B0B0">
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.42;0.95;1" dur="13s" repeatCount="indefinite"/>
+      <text x="33" y="238" font-size="14" fill="#EDEDF0" textLength="300" lengthAdjust="spacingAndGlyphs">streaming live — jump to 02 · the record ↓</text>
+      <rect x="341" y="224" width="8" height="16" rx="1.5" fill="#00FFFF" filter="url(#neon)">
         <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1s" repeatCount="indefinite"/>
       </rect>
     </g>
-    <text x="24" y="262" font-size="15" fill="#3D3D3D">// awaiting input
-      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.55;0.96" dur="13s" repeatCount="indefinite"/>
+    <text x="33" y="266" font-size="13" fill="#5A5A63">// awaiting input
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0;0" keyTimes="0;0.55;0.95;1" dur="13s" repeatCount="indefinite"/>
     </text>
     <!-- status bar -->
     <g clip-path="url(#plateClip)">
-      <rect x="0" y="272" width="840" height="40" fill="#1C1C1C"/>
+      <rect x="5" y="273" width="840" height="44" fill="#131317"/>
     </g>
-    <rect x="0" y="271" width="840" height="1" fill="#3D3D3D"/>
-    <text x="24" y="297" font-size="9" letter-spacing="1.5" fill="#7D7D7D">TTY-1 // BLACK-KNIGHT // LINK: OK</text>
-    <rect x="660" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;20;8;24;12;4" dur="1.3s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;286;298;282;294;302" dur="1.3s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="671" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;16;22;8;18;4" dur="1.38s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;290;284;298;288;302" dur="1.38s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="682" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;24;10;20;8;4" dur="1.46s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;282;296;286;296;302" dur="1.46s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="693" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;12;20;10;22;4" dur="1.54s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;294;286;296;284;302" dur="1.54s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="704" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;18;8;24;14;4" dur="1.62s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;288;298;282;292;302" dur="1.62s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="715" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;22;12;18;8;4" dur="1.7s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;284;294;288;296;302" dur="1.7s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="726" y="302" width="6" height="4" fill="#7D7D7D">
-      <animate attributeName="height" values="4;14;24;8;16;4" dur="1.78s" repeatCount="indefinite"/>
-      <animate attributeName="y" values="302;292;282;298;290;302" dur="1.78s" repeatCount="indefinite"/>
-    </rect>
-    <circle cx="782" cy="293" r="3.5" fill="#B0B0B0">
-      <animate attributeName="opacity" values="1;0.15;1" dur="1.6s" repeatCount="indefinite"/>
+    <rect x="5" y="273" width="840" height="1.5" fill="#2A2A2F"/>
+    <text x="33" y="299" font-size="9" letter-spacing="1.5" fill="#8A8A93">TTY-1 // SOFT-BRUTALIST // LINK: OK</text>
+    <!-- signal equalizer, subtle -->
+    <g fill="#3A3A42">
+      <rect x="640" y="295" width="4" height="6"><animate attributeName="height" values="6;14;8;12;6" dur="1.3s" repeatCount="indefinite"/><animate attributeName="y" values="295;287;293;289;295" dur="1.3s" repeatCount="indefinite"/></rect>
+      <rect x="652" y="295" width="4" height="6"><animate attributeName="height" values="6;11;14;8;6" dur="1.44s" repeatCount="indefinite"/><animate attributeName="y" values="295;290;287;293;295" dur="1.44s" repeatCount="indefinite"/></rect>
+      <rect x="664" y="295" width="4" height="6"><animate attributeName="height" values="6;13;7;14;6" dur="1.58s" repeatCount="indefinite"/><animate attributeName="y" values="295;288;294;287;295" dur="1.58s" repeatCount="indefinite"/></rect>
+      <rect x="676" y="295" width="4" height="6"><animate attributeName="height" values="6;9;13;11;6" dur="1.36s" repeatCount="indefinite"/><animate attributeName="y" values="295;292;288;290;295" dur="1.36s" repeatCount="indefinite"/></rect>
+      <rect x="688" y="295" width="4" height="6"><animate attributeName="height" values="6;12;8;14;6" dur="1.52s" repeatCount="indefinite"/><animate attributeName="y" values="295;289;293;287;295" dur="1.52s" repeatCount="indefinite"/></rect>
+      <rect x="700" y="295" width="4" height="6"><animate attributeName="height" values="6;14;10;9;6" dur="1.28s" repeatCount="indefinite"/><animate attributeName="y" values="295;287;291;292;295" dur="1.28s" repeatCount="indefinite"/></rect>
+      <rect x="712" y="295" width="4" height="6"><animate attributeName="height" values="6;10;14;7;6" dur="1.62s" repeatCount="indefinite"/><animate attributeName="y" values="295;291;287;294;295" dur="1.62s" repeatCount="indefinite"/></rect>
+      <rect x="724" y="295" width="4" height="6"><animate attributeName="height" values="6;13;9;12;6" dur="1.4s" repeatCount="indefinite"/><animate attributeName="y" values="295;288;292;289;295" dur="1.4s" repeatCount="indefinite"/></rect>
+    </g>
+    <circle cx="773" cy="296" r="3.5" fill="#C0FF00" filter="url(#neon)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
     </circle>
-    <text x="792" y="297" font-size="9" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">LIVE</text>
-    <!-- marching ants -->
-    <rect x="1.5" y="1.5" width="837" height="309" rx="12.5" fill="none" stroke="#7D7D7D" stroke-width="1" stroke-dasharray="7 9" opacity="0.45">
-      <animate attributeName="stroke-dashoffset" from="0" to="-64" dur="3.2s" repeatCount="indefinite"/>
-    </rect>
-    <!-- scan sweep -->
+    <text x="786" y="300" font-size="9" font-weight="bold" letter-spacing="1.5" fill="#EDEDF0">LIVE</text>
+    <!-- atmospheric sweep -->
     <g clip-path="url(#plateClip)">
-      <rect x="0" y="0" width="90" height="312" fill="url(#scan)">
-        <animateTransform attributeName="transform" type="translate" from="-120 0" to="870 0" dur="4s" repeatCount="indefinite"/>
+      <rect x="0" y="5" width="130" height="312" fill="url(#scan)">
+        <animateTransform attributeName="transform" type="translate" from="-160 0" to="870 0" dur="10s" repeatCount="indefinite"/>
       </rect>
     </g>
-    <rect x="0" y="0" width="840" height="312" rx="14" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+    <rect x="5" y="5" width="840" height="312" rx="24" fill="none" stroke="#2A2A2F" stroke-width="3"/>
+    <path d="M 845 29 L 845 293 A 24 24 0 0 1 821 317 L 29 317" fill="none" stroke="url(#rim)" stroke-width="2" opacity="0.65"/>
   </g>
 </svg>
