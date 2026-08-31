@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="68" viewBox="0 0 840 68" role="img" aria-label="Section 04, The Signal">
+  <g font-family="monospace">
+    <rect x="0" y="31" width="840" height="2" fill="#3D3D3D"/>
+    <line x1="0" y1="32" x2="840" y2="32" stroke="#B0B0B0" stroke-width="2" stroke-dasharray="80 760" opacity="0.9">
+      <animate attributeName="stroke-dashoffset" from="0" to="-840" dur="2.8s" repeatCount="indefinite"/>
+    </line>
+    <rect x="7" y="17" width="258" height="46" rx="9" fill="#B0B0B0"/>
+    <rect x="0" y="10" width="258" height="46" rx="9" fill="#000000" stroke="#3D3D3D" stroke-width="1.5"/>
+    <circle cx="18" cy="33" r="3.5" fill="#B0B0B0">
+      <animate attributeName="opacity" values="1;0.15;1" dur="1.8s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+    <text x="32" y="31" font-size="13.5" font-weight="bold" letter-spacing="2.5" fill="#B0B0B0">04 — THE SIGNAL</text>
+    <text x="32" y="47" font-size="8" letter-spacing="1.5" fill="#7D7D7D">OPEN CHANNELS · LINKS BELOW</text>
+    <circle cx="722" cy="33" r="3" fill="#7D7D7D">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="832" y="37" text-anchor="end" font-size="9" letter-spacing="2" fill="#7D7D7D">03 CHANNELS</text>
+  </g>
+</svg>

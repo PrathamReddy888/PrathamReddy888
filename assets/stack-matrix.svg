@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="394" viewBox="0 0 850 394" role="img" aria-label="Stack matrix, six languages and five tools">
+  <defs>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#1C1C1C" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B0B0B0" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#B0B0B0" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#B0B0B0" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="plateClip"><rect x="0" y="0" width="840" height="384" rx="14"/></clipPath>
+    <clipPath id="tkClip"><rect x="30" y="350" width="780" height="22"/></clipPath>
+  </defs>
+  <g font-family="monospace">
+    <rect x="10" y="10" width="840" height="384" rx="14" fill="#B0B0B0"/>
+    <rect x="0" y="0" width="840" height="384" rx="14" fill="#000000"/>
+    <rect x="0" y="0" width="840" height="384" rx="14" fill="url(#grid)"/>
+    <!-- languages header -->
+    <text x="24" y="38" font-size="15" font-weight="bold" letter-spacing="3" fill="#B0B0B0">LANGUAGE CORE</text>
+    <text x="816" y="36" text-anchor="end" font-size="9" letter-spacing="2" fill="#7D7D7D">06 UNITS</text>
+    <rect x="24" y="48" width="792" height="1" fill="#1C1C1C"/>
+    <!-- python -->
+    <rect x="24" y="62" width="249" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="259" cy="76" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" repeatCount="indefinite"/></circle>
+    <text x="40" y="102" font-size="16" font-weight="bold" letter-spacing="2" fill="#B0B0B0">PYTHON</text>
+    <text x="40" y="117" font-size="8.5" letter-spacing="1" fill="#7D7D7D">ML CORE</text>
+    <!-- typescript -->
+    <rect x="295" y="62" width="249" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="0.27s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="530" cy="76" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.13s" repeatCount="indefinite"/></circle>
+    <text x="311" y="102" font-size="16" font-weight="bold" letter-spacing="2" fill="#B0B0B0">TYPESCRIPT</text>
+    <text x="311" y="117" font-size="8.5" letter-spacing="1" fill="#7D7D7D">APPS</text>
+    <!-- rust -->
+    <rect x="566" y="62" width="249" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="0.54s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="801" cy="76" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.26s" repeatCount="indefinite"/></circle>
+    <text x="582" y="102" font-size="16" font-weight="bold" letter-spacing="2" fill="#B0B0B0">RUST</text>
+    <text x="582" y="117" font-size="8.5" letter-spacing="1" fill="#7D7D7D">SYSTEMS</text>
+    <!-- javascript -->
+    <rect x="24" y="146" width="249" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="0.81s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="259" cy="160" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.39s" repeatCount="indefinite"/></circle>
+    <text x="40" y="186" font-size="16" font-weight="bold" letter-spacing="2" fill="#B0B0B0">JAVASCRIPT</text>
+    <text x="40" y="201" font-size="8.5" letter-spacing="1" fill="#7D7D7D">SCRIPTING</text>
+    <!-- html -->
+    <rect x="295" y="146" width="249" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="1.08s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="530" cy="160" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.52s" repeatCount="indefinite"/></circle>
+    <text x="311" y="186" font-size="16" font-weight="bold" letter-spacing="2" fill="#B0B0B0">HTML</text>
+    <text x="311" y="201" font-size="8.5" letter-spacing="1" fill="#7D7D7D">STRUCTURE</text>
+    <!-- css -->
+    <rect x="566" y="146" width="249" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="1.35s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="801" cy="160" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.65s" repeatCount="indefinite"/></circle>
+    <text x="582" y="186" font-size="16" font-weight="bold" letter-spacing="2" fill="#B0B0B0">CSS</text>
+    <text x="582" y="201" font-size="8.5" letter-spacing="1" fill="#7D7D7D">STYLE</text>
+    <!-- tools header -->
+    <text x="24" y="238" font-size="15" font-weight="bold" letter-spacing="3" fill="#B0B0B0">TOOLING</text>
+    <text x="816" y="236" text-anchor="end" font-size="9" letter-spacing="2" fill="#7D7D7D">05 UNITS</text>
+    <rect x="24" y="248" width="792" height="1" fill="#1C1C1C"/>
+    <!-- pytorch -->
+    <rect x="24" y="262" width="141" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="1.62s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="152" cy="276" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.78s" repeatCount="indefinite"/></circle>
+    <text x="40" y="302" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">PYTORCH</text>
+    <text x="40" y="317" font-size="8" letter-spacing="1" fill="#7D7D7D">DEEP LEARNING</text>
+    <!-- react -->
+    <rect x="186" y="262" width="141" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="1.89s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="314" cy="276" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="0.91s" repeatCount="indefinite"/></circle>
+    <text x="202" y="302" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">REACT</text>
+    <text x="202" y="317" font-size="8" letter-spacing="1" fill="#7D7D7D">INTERFACES</text>
+    <!-- nextjs -->
+    <rect x="348" y="262" width="141" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="2.16s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="476" cy="276" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="1.04s" repeatCount="indefinite"/></circle>
+    <text x="364" y="302" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">NEXT.JS</text>
+    <text x="364" y="317" font-size="8" letter-spacing="1" fill="#7D7D7D">FULL STACK</text>
+    <!-- nodejs -->
+    <rect x="510" y="262" width="141" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="2.43s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="638" cy="276" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="1.17s" repeatCount="indefinite"/></circle>
+    <text x="526" y="302" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">NODE.JS</text>
+    <text x="526" y="317" font-size="8" letter-spacing="1" fill="#7D7D7D">RUNTIME</text>
+    <!-- git -->
+    <rect x="672" y="262" width="141" height="62" rx="10" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1.5">
+      <animate attributeName="stroke" values="#3D3D3D;#B0B0B0;#3D3D3D;#3D3D3D" keyTimes="0;0.1;0.32;1" dur="4.4s" begin="2.7s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="800" cy="276" r="3" fill="#7D7D7D"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="1.3s" repeatCount="indefinite"/></circle>
+    <text x="688" y="302" font-size="13" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">GIT</text>
+    <text x="688" y="317" font-size="8" letter-spacing="1" fill="#7D7D7D">VERSIONING</text>
+    <!-- manifest ticker -->
+    <rect x="24" y="348" width="792" height="26" rx="6" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1"/>
+    <g clip-path="url(#tkClip)">
+      <g>
+        <text x="34" y="366" font-size="9.5" letter-spacing="1.5" fill="#7D7D7D">MANIFEST // PYTHON · TYPESCRIPT · RUST · JAVASCRIPT · HTML · CSS · PYTORCH · REACT · NEXT.JS · NODE.JS · GIT //</text>
+        <text x="934" y="366" font-size="9.5" letter-spacing="1.5" fill="#7D7D7D">MANIFEST // PYTHON · TYPESCRIPT · RUST · JAVASCRIPT · HTML · CSS · PYTORCH · REACT · NEXT.JS · NODE.JS · GIT //</text>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-900 0" dur="26s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- marching ants -->
+    <rect x="1.5" y="1.5" width="837" height="381" rx="12.5" fill="none" stroke="#7D7D7D" stroke-width="1" stroke-dasharray="7 9" opacity="0.45">
+      <animate attributeName="stroke-dashoffset" from="0" to="-64" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- scan sweep -->
+    <g clip-path="url(#plateClip)">
+      <rect x="0" y="0" width="90" height="384" fill="url(#scan)">
+        <animateTransform attributeName="transform" type="translate" from="-120 0" to="870 0" dur="5.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <rect x="0" y="0" width="840" height="384" rx="14" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+  </g>
+</svg>

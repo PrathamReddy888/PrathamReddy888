@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="160" viewBox="0 0 850 160" role="img" aria-label="End of file stamp">
+  <defs>
+    <clipPath id="plateClip"><rect x="0" y="0" width="840" height="150" rx="14"/></clipPath>
+    <clipPath id="tkClip"><rect x="20" y="114" width="800" height="22"/></clipPath>
+  </defs>
+  <g font-family="monospace">
+    <rect x="10" y="10" width="840" height="150" rx="14" fill="#B0B0B0"/>
+    <rect x="0" y="0" width="840" height="150" rx="14" fill="#000000"/>
+    <!-- EOF block -->
+    <text x="28" y="64" font-size="30" font-weight="bold" letter-spacing="4" fill="#B0B0B0">EOF</text>
+    <text x="28" y="86" font-size="10" letter-spacing="2" fill="#7D7D7D">TRANSMISSION COMPLETE</text>
+    <text x="28" y="102" font-size="8.5" letter-spacing="1.5" fill="#3D3D3D">LINKS BELOW · OPEN CHANNELS</text>
+    <!-- rotating ring -->
+    <circle cx="420" cy="58" r="30" fill="none" stroke="#7D7D7D" stroke-width="1.5" stroke-dasharray="5 7">
+      <animateTransform attributeName="transform" type="rotate" from="0 420 58" to="360 420 58" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="420" cy="58" r="19" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+    <circle cx="420" cy="58" r="4.5" fill="#B0B0B0">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- radar -->
+    <circle cx="748" cy="58" r="28" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+    <circle cx="748" cy="58" r="18" fill="none" stroke="#3D3D3D" stroke-width="1"/>
+    <circle cx="748" cy="58" r="8" fill="none" stroke="#3D3D3D" stroke-width="1"/>
+    <g>
+      <line x1="748" y1="58" x2="776" y2="58" stroke="#B0B0B0" stroke-width="1.5" opacity="0.9"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 748 58" to="360 748 58" dur="3.5s" repeatCount="indefinite"/>
+    </g>
+    <circle cx="762" cy="44" r="3" fill="#B0B0B0">
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- ticker -->
+    <rect x="14" y="112" width="812" height="26" rx="6" fill="#1C1C1C" stroke="#3D3D3D" stroke-width="1"/>
+    <g clip-path="url(#tkClip)">
+      <g>
+        <text x="24" y="129" font-size="9.5" letter-spacing="1.5" fill="#7D7D7D">36 REPOSITORIES — ZERO LOCKED — END OF TRANSMISSION — OPEN CHANNELS BELOW —</text>
+        <text x="884" y="129" font-size="9.5" letter-spacing="1.5" fill="#7D7D7D">36 REPOSITORIES — ZERO LOCKED — END OF TRANSMISSION — OPEN CHANNELS BELOW —</text>
+        <animateTransform attributeName="transform" type="translate" from="0 0" to="-860 0" dur="18s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <!-- marching ants -->
+    <rect x="1.5" y="1.5" width="837" height="147" rx="12.5" fill="none" stroke="#7D7D7D" stroke-width="1" stroke-dasharray="7 9" opacity="0.45">
+      <animate attributeName="stroke-dashoffset" from="0" to="-64" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="840" height="150" rx="14" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+  </g>
+</svg>

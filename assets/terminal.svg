@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="322" viewBox="0 0 850 322" role="img" aria-label="Terminal console">
+  <defs>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M26 0H0V26" fill="none" stroke="#1C1C1C" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B0B0B0" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#B0B0B0" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#B0B0B0" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="plateClip"><rect x="0" y="0" width="840" height="312" rx="14"/></clipPath>
+    <clipPath id="cmd1Clip">
+      <rect x="42" y="0" width="0" height="26">
+        <animate attributeName="width" values="0;0;54;54;0" keyTimes="0;0.03;0.09;0.96;1" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="cmd2Clip">
+      <rect x="42" y="0" width="0" height="26">
+        <animate attributeName="width" values="0;0;135;135;0" keyTimes="0;0.16;0.26;0.96;1" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="cmd3Clip">
+      <rect x="42" y="0" width="0" height="26">
+        <animate attributeName="width" values="0;0;180;180;0" keyTimes="0;0.33;0.43;0.96;1" dur="13s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <g font-family="monospace">
+    <!-- hard shadow + plate -->
+    <rect x="10" y="10" width="840" height="312" rx="14" fill="#B0B0B0"/>
+    <rect x="0" y="0" width="840" height="312" rx="14" fill="#000000"/>
+    <rect x="0" y="44" width="840" height="228" fill="url(#grid)"/>
+    <!-- title bar -->
+    <g clip-path="url(#plateClip)">
+      <rect x="0" y="0" width="840" height="44" fill="#1C1C1C"/>
+    </g>
+    <circle cx="26" cy="22" r="6" fill="#7D7D7D"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="48" cy="22" r="6" fill="#7D7D7D"><animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" begin="0.4s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="22" r="6" fill="#7D7D7D"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.4s" begin="0.8s" repeatCount="indefinite"/></circle>
+    <text x="420" y="27" text-anchor="middle" font-size="11" letter-spacing="2" fill="#7D7D7D">pratham@github:~ — tty1</text>
+    <text x="816" y="27" text-anchor="end" font-size="9" letter-spacing="1.5" fill="#3D3D3D">SHELL: ZSH</text>
+    <!-- line 1 -->
+    <g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.03;0.96" dur="13s" repeatCount="indefinite"/>
+      <text x="24" y="78" font-size="15" font-weight="bold" fill="#B0B0B0">$</text>
+      <g clip-path="url(#cmd1Clip)"><text x="42" y="78" font-size="15" fill="#B0B0B0">whoami</text></g>
+    </g>
+    <text x="24" y="102" font-size="15" fill="#7D7D7D">PrathamReddy888 — operator // 36 public repos
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.10;0.96" dur="13s" repeatCount="indefinite"/>
+    </text>
+    <!-- line 2 -->
+    <g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.16;0.96" dur="13s" repeatCount="indefinite"/>
+      <text x="24" y="140" font-size="15" font-weight="bold" fill="#B0B0B0">$</text>
+      <g clip-path="url(#cmd2Clip)"><text x="42" y="140" font-size="15" fill="#B0B0B0">cat ~/stack.txt</text></g>
+    </g>
+    <text x="24" y="164" font-size="15" fill="#7D7D7D">python · rust · typescript · pytorch · react · next
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.27;0.96" dur="13s" repeatCount="indefinite"/>
+    </text>
+    <!-- line 3 -->
+    <g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.33;0.96" dur="13s" repeatCount="indefinite"/>
+      <text x="24" y="204" font-size="15" font-weight="bold" fill="#B0B0B0">$</text>
+      <g clip-path="url(#cmd3Clip)"><text x="42" y="204" font-size="15" fill="#B0B0B0">tail -f ~/proof.log</text></g>
+    </g>
+    <g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.44;0.96" dur="13s" repeatCount="indefinite"/>
+      <text x="24" y="228" font-size="15" fill="#B0B0B0">streaming live — jump to 02 · the record ↓</text>
+      <rect x="410" y="190" width="10" height="18" fill="#B0B0B0">
+        <animate attributeName="opacity" values="1;0" keyTimes="0;0.5" calcMode="discrete" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <text x="24" y="262" font-size="15" fill="#3D3D3D">// awaiting input
+      <animate attributeName="opacity" calcMode="discrete" values="0;1;0" keyTimes="0;0.55;0.96" dur="13s" repeatCount="indefinite"/>
+    </text>
+    <!-- status bar -->
+    <g clip-path="url(#plateClip)">
+      <rect x="0" y="272" width="840" height="40" fill="#1C1C1C"/>
+    </g>
+    <rect x="0" y="271" width="840" height="1" fill="#3D3D3D"/>
+    <text x="24" y="297" font-size="9" letter-spacing="1.5" fill="#7D7D7D">TTY-1 // BLACK-KNIGHT // LINK: OK</text>
+    <rect x="660" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;20;8;24;12;4" dur="1.3s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;286;298;282;294;302" dur="1.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="671" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;16;22;8;18;4" dur="1.38s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;290;284;298;288;302" dur="1.38s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="682" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;24;10;20;8;4" dur="1.46s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;282;296;286;296;302" dur="1.46s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="693" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;12;20;10;22;4" dur="1.54s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;294;286;296;284;302" dur="1.54s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="704" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;18;8;24;14;4" dur="1.62s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;288;298;282;292;302" dur="1.62s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="715" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;22;12;18;8;4" dur="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;284;294;288;296;302" dur="1.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="726" y="302" width="6" height="4" fill="#7D7D7D">
+      <animate attributeName="height" values="4;14;24;8;16;4" dur="1.78s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="302;292;282;298;290;302" dur="1.78s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="782" cy="293" r="3.5" fill="#B0B0B0">
+      <animate attributeName="opacity" values="1;0.15;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="792" y="297" font-size="9" font-weight="bold" letter-spacing="1.5" fill="#B0B0B0">LIVE</text>
+    <!-- marching ants -->
+    <rect x="1.5" y="1.5" width="837" height="309" rx="12.5" fill="none" stroke="#7D7D7D" stroke-width="1" stroke-dasharray="7 9" opacity="0.45">
+      <animate attributeName="stroke-dashoffset" from="0" to="-64" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <!-- scan sweep -->
+    <g clip-path="url(#plateClip)">
+      <rect x="0" y="0" width="90" height="312" fill="url(#scan)">
+        <animateTransform attributeName="transform" type="translate" from="-120 0" to="870 0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    <rect x="0" y="0" width="840" height="312" rx="14" fill="none" stroke="#3D3D3D" stroke-width="1.5"/>
+  </g>
+</svg>
