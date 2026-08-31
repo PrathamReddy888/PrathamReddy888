@@ -39,7 +39,7 @@
 <!-- ══ 02 · THE RECORD ══ -->
 <img src="assets/divider-record.svg" alt="Section 02, The Record" />
 <br />
-<img src="https://streak-stats.demolab.com/?user=PrathamReddy888&amp;background=000000&amp;border=3D3D3D&amp;stroke=3D3D3D&amp;ring=B0B0B0&amp;fire=B0B0B0&amp;currStreakNum=B0B0B0&amp;currStreakLabel=B0B0B0&amp;sideNums=7D7D7D&amp;sideLabels=7D7D7D&amp;dates=3D3D3D&amp;hide_border=false&amp;border_radius=16" alt="GitHub contribution streak: total contributions, current and longest streak, live data" />
+<img src="https://streak-stats.demolab.com/?user=PrathamReddy888&amp;background=0D0D0F&amp;border=2A2A2F&amp;stroke=2A2A2F&amp;ring=B0B0B0&amp;fire=C0FF00&amp;currStreakNum=EDEDF0&amp;currStreakLabel=8A8A93&amp;sideNums=B0B0B0&amp;sideLabels=8A8A93&amp;dates=8A8A93&amp;hide_border=false&amp;border_radius=16" alt="GitHub contribution streak: total contributions, current and longest streak, live data" />
 <br />
 <img src="assets/chart-frame.svg" alt="Daily contributions frame, last 12 months" />
 <br />
